@@ -1,0 +1,130 @@
+## Analysis 180608: Read count ##
+
+####################
+# read count with htseq-count with samples #46956 - #46964 and Aspergillus - Klepsiella merged .gff file obtained from CIBIV (Aspergillus fumigatus Af293 s03-m05-r06; Klebsiella pneumonie GCF_001596075.2)
+# removing flags in count files
+####################
+
+	for i in *.sorted.bam
+	do
+	htseq-count -f bam -s no -t gene -i ID $i GCF_001596075.2_ASM159607v2_genomic_A_fumigatus_Af293_current_features_valid.gff > $i.count.txt
+	done
+
+	for i in *.count.txt
+	do
+	head -n -5 $i > $i.crop.txt
+	done
+
+
+###################
+# HTSeq version version 0.6.1p1
+# 59 features called 'rRNA' are in the merged .gff file, they represent the transcripts. The corresponding genes are labeled as 'gene' and are also counted by HTSeq!
+# Check the counts of these rRNA genes and check if they are low enough to be removed during edgeR analysis or at least don't influence the quantification!
+# Looks like some Aspergillus rRNA at least have very high counts - remove all rRNA genes prior to edgeR analysis
+################### 
+
+##################
+# Gene IDs from rRNA genes in merged .gff file extracted - used to filter out rRNA genes in R prior to edgeR analysis
+##################
+
+cat GCF_001596075.2_ASM159607v2_genomic_A_fumigatus_Af293_current_features_valid.gff | awk '$3=="rRNA"' > rRNAs.gff
+cat rRNAs.gff | cut -f9 | cut -f2 -d ';' | cut -f2 -d '=' > rRNA_gene_IDs.gff
+
+##################
+# Count files filtered for the 59 rRNA genes in 'rRNA_gene_IDs.gff' in RStudio 1.1.453, R version 3.1.1 and fungal and bacterial genes separated into 2 files
+##################
+
+rRNAs <- read.table('rRNA_gene_IDs.gff')
+rRNAs$ID <- rep("rRNA", length(rRNAs[,1]))
+
+files <- list.files(pattern = "*.crop.txt")
+ext <- "filt.txt"
+
+for (i in files) {
+  s <- read.table(i)
+  sm <- merge(s, rRNAs, all.x = T)
+  smf <- sm[is.na(sm$ID),]
+  smf <- smf[,c(1,2)]
+  smfA1 <- smf[grep("^Afu", smf$V1),]   ### Filter out all fungal genes
+  smfA2 <- smf[grep("^U1", smf$V1),]
+  smfA <- rbind(smfA1, smfA2)
+  smfK <- smf[grep("^gene", smf$V1),]   ### Filter out all bacterial genes
+  write.table(smfA, file = paste(i, ext1, sep = "."), col.names = F, row.names = F, quote = F, sep = "\t")
+  write.table(smfK, file = paste(i, ext2, sep = "."), col.names = F, row.names = F, quote = F, sep = "\t")
+}
+
+##################
+# Diff expression analysis done with edgeR version 3.8.6 in R version 3.1.1
+# Genes with less than 1 count per million reads in all replicates of at least one of the conditions compared were removed
+# FDR < 0.01 was used for significance (FDR was calculated by Benjamini-Hochberg adjustment of p-values)
+##################
+
+library(edgeR)
+
+pval = 0.01 # set pvalue threshold (only relevant for plotting)
+pval_adjust = "BH"  # set method for p-value adjustment for multiple testing (= FDR calculation)
+cutoff = c(-1,1)  # set log2 fold change line in plots (e.g. "c(-1,1)" means lines will be drawn at 2-fold up and down)
+res_list <- list()
+
+
+ID_Names <- read.table('ID_Names_Asp_Kle.txt', row.names = 1) # Import table for addition of gene names
+names(ID_Names) <- c('Name')
+
+targets_Asp <- readTargets(file = "Targets_Asp.txt") # this imports the data in the Targets_Asp.txt file = experiment setup
+targets_Kle <- readTargets(file = "Targets_Kle.txt") # this imports the data in the Targets_Kle.txt file = experiment setup
+
+targets = list(targets_Asp, targets_Kle)
+
+for (i in targets) {
+
+  d <- readDGE(i, header = F) # this reads in the count data
+
+  # Filter low expression tags (cpm<1)
+  keep <- rowSums(cpm(d)> 1) >= 3 # this creates an R object with the genes/transcripts that have more than 1 counts per million - change the 1 if you want to modify the filter; the 3 at the end is the group size - change this if you have more or less replicates than 3
+  d <- d[keep,] # this filters out all genes/transcripts with less than 1 counts per million
+  d$samples$lib.size <- colSums(d$counts) # this calculates the library size again after the filtering step
+
+  # Normalization (TMM)
+  d <- calcNormFactors(d) # this calculates the normalization factors used during the diffrential expression analysis
+
+  # Estimating the dispersions
+  d <- estimateCommonDisp(d, verbose=TRUE) # this calculates the common dispersion over all genes and samples - is used during the diff. expr. anaylsis
+  d <- estimateTagwiseDisp(d) # this calculates the dispersion for each gene/transcript - is used during the diff. expr. anaylsis
+  
+  pdf(paste(i[1,2], "_", i[length(i[,2]),2], "_disp.pdf", sep = ""))  # change the name of the .pdf file; this opens a pdf file to store the next plot
+  plotBCV(d)
+  dev.off()  # closes and saves the pdf file with the plot
+
+  
+  # Differential expression, lines with # signs are just control commands to check the analysis
+  
+  et <- exactTest(d, pair= i[c(1,length(i[,2])),2]) # change the names in quotes to your group names; this command performs the differential expression analysis
+  detags <- rownames(d)[as.logical(de)] # this command saves the row names of differentially expressed genes as "detags"
+  pdf(paste(i[1,2], "_", i[length(i[,2]),2], ".pdf", sep = ""))  # change the name of the .pdf file; this opens a pdf file to store the next plot
+  plotSmear(et, de.tags=detags, xlab = "Average log2 counts per million", ylab = "log2 fold change") # this plots the analysis results; use "panel.first = NULL" to remove grid
+  abline(h = cutoff, col = "blue")
+  dev.off() # closes and saves the pdf file with the plot
+  
+  # Export results
+  
+  res <-as.data.frame(topTags(et, n=Inf)) # this saves the fold change table in "tt"
+  res$FC <- 2^res$logFC   # include a fold change column (non-log)
+  
+  resNames <- merge(res, ID_Names, by = 0, all.x = T)
+  names(resNames) <- c('ID', 'log2_FoldChange', 'log2_counts_per_million', 'pvalue', 'adj_pvalue', 'FoldChange', 'Name')
+  
+  write.table(resNames[,c(1,7,2,6,5,3)], file=paste(i[1,2], "_", i[length(i[,2]),2], ".txt", sep = ""), sep="\t", quote=FALSE, row.names = F) # this exports the fold change table; change the file name of the .txt file as you want
+  
+  cpmill = as.data.frame(d$pseudo.counts) # this saves the counts per million table in a new R object called "pcounts_1h" - change this name as you want
+  names(cpmill) = i$description # this changes the column names in the previously created "pcounts_1" table;
+  write.table(cpmill, file=paste(i[1,2], "_", i[length(i[,2]),2], "_cpm.txt", sep = ""), sep="\t", quote=FALSE) # this exports the counts per million table; change the file name as you want
+  
+  res_list <- c(res_list, list(res, cpmill))
+  
+}
+
+
+
+
+
+

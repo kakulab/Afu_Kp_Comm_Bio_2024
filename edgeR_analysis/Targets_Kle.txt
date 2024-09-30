@@ -1,0 +1,7 @@
+files	group	description
+46959_CTTGTA_CAJ0NANXX_7_20170113B_20170113.bam.sam.bam.sorted.bam.count.txt.crop.txt.filtKp.txt	Kle	K1
+46960_GAGTGG_CAJ0NANXX_7_20170113B_20170113.bam.sam.bam.sorted.bam.count.txt.crop.txt.filtKp.txt	Kle	K2
+46961_TGACCA_CAJ0NANXX_7_20170113B_20170113.bam.sam.bam.sorted.bam.count.txt.crop.txt.filtKp.txt	Kle	K3
+46962_ACTGAT_CAJ0NANXX_7_20170113B_20170113.bam.sam.bam.sorted.bam.count.txt.crop.txt.filtKp.txt	Asp+Kle	AK1
+46963_GTCCGC_CAJ0NANXX_7_20170113B_20170113.bam.sam.bam.sorted.bam.count.txt.crop.txt.filtKp.txt	Asp+Kle	AK2
+46964_AGTCAA_CAJ0NANXX_7_20170113B_20170113.bam.sam.bam.sorted.bam.count.txt.crop.txt.filtKp.txt	Asp+Kle	AK3

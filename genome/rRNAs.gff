@@ -1,0 +1,59 @@
+Chr1_A_fumigatus_Af293	AspGD	rRNA	942834	942949	.	+	.	ID=Afu1g03215-T;Parent=Afu1g03215;Name=Afu1g03215;orf_classification=Uncharacterized;Alias=AFUA_1G03215,CADAFUAG00009861
+Chr1_A_fumigatus_Af293	AspGD	rRNA	962754	962869	.	-	.	ID=Afu1g03336-T;Parent=Afu1g03336;Name=Afu1g03336;orf_classification=Uncharacterized;Alias=AFUA_1G03336,CADAFUAG00009886
+Chr1_A_fumigatus_Af293	AspGD	rRNA	3693892	3694007	.	-	.	ID=Afu1g13825-T;Parent=Afu1g13825;Name=Afu1g13825;orf_classification=Uncharacterized;Alias=AFUA_1G13825,CADAFUAG00009860
+Chr1_A_fumigatus_Af293	AspGD	rRNA	4802921	4803036	.	+	.	ID=Afu1g17545-T;Parent=Afu1g17545;Name=Afu1g17545;orf_classification=Uncharacterized;Alias=AFUA_1G17545,CADAFUAG00009847
+Chr2_A_fumigatus_Af293	AspGD	rRNA	814673	814788	.	-	.	ID=Afu2g03115-T;Parent=Afu2g03115;Name=Afu2g03115;orf_classification=Uncharacterized;Alias=AFUA_2G03115,CADAFUAG00009889
+Chr2_A_fumigatus_Af293	AspGD	rRNA	1064778	1064893	.	-	.	ID=Afu2g03935-T;Parent=Afu2g03935;Name=Afu2g03935;orf_classification=Uncharacterized;Alias=AFUA_2G03935,CADAFUAG00009883
+Chr2_A_fumigatus_Af293	AspGD	rRNA	2654670	2654785	.	+	.	ID=Afu2g10375-T;Parent=Afu2g10375;Name=Afu2g10375;orf_classification=Uncharacterized;Alias=AFUA_2G10375,CADAFUAG00009848
+Chr3_A_fumigatus_Af293	AspGD	rRNA	710375	710490	.	+	.	ID=Afu3g02735-T;Parent=Afu3g02735;Name=Afu3g02735;orf_classification=Uncharacterized;Alias=AFUA_3G02735,CADAFUAG00009870
+Chr3_A_fumigatus_Af293	AspGD	rRNA	755859	755974	.	+	.	ID=Afu3g02845-T;Parent=Afu3g02845;Name=Afu3g02845;orf_classification=Uncharacterized;Alias=AFUA_3G02845,CADAFUAG00009874
+Chr3_A_fumigatus_Af293	AspGD	rRNA	767772	767887	.	+	.	ID=Afu3g02875-T;Parent=Afu3g02875;Name=Afu3g02875;orf_classification=Uncharacterized;Alias=AFUA_3G02875,CADAFUAG00009892
+Chr3_A_fumigatus_Af293	AspGD	rRNA	836707	836822	.	+	.	ID=Afu3g03105-T;Parent=Afu3g03105;Name=Afu3g03105;orf_classification=Uncharacterized;Alias=AFUA_3G03105,CADAFUAG00009878
+Chr3_A_fumigatus_Af293	AspGD	rRNA	842272	842387	.	+	.	ID=Afu3g03135-T;Parent=Afu3g03135;Name=Afu3g03135;orf_classification=Uncharacterized;Alias=AFUA_3G03135,CADAFUAG00009872
+Chr3_A_fumigatus_Af293	AspGD	rRNA	979980	980095	.	-	.	ID=Afu3g03637-T;Parent=Afu3g03637;Name=Afu3g03637;orf_classification=Uncharacterized;Alias=AFUA_3G03637,CADAFUAG00009855
+Chr3_A_fumigatus_Af293	AspGD	rRNA	1835467	1835582	.	-	.	ID=Afu3g07305-T;Parent=Afu3g07305;Name=Afu3g07305;orf_classification=Uncharacterized;Alias=AFUA_3G07305,CADAFUAG00009890
+Chr3_A_fumigatus_Af293	AspGD	rRNA	2277849	2277964	.	-	.	ID=Afu3g08915-T;Parent=Afu3g08915;Name=Afu3g08915;orf_classification=Uncharacterized;Alias=AFUA_3G08915,CADAFUAG00009852
+Chr3_A_fumigatus_Af293	AspGD	rRNA	2378796	2378911	.	-	.	ID=Afu3g09395-T;Parent=Afu3g09395;Name=Afu3g09395;orf_classification=Uncharacterized;Alias=AFUA_3G09395,CADAFUAG00009891
+Chr4_A_fumigatus_Af293	AspGD	rRNA	435398	442458	.	-	.	ID=Afu4g01850-T;Parent=Afu4g01850;Name=Afu4g01850;orf_classification=Uncharacterized;Alias=AFUA_4G01850,CADAFUAG00009884
+Chr4_A_fumigatus_Af293	AspGD	rRNA	442645	444442	.	-	.	ID=Afu4g02100-T;Parent=Afu4g02100;Name=Afu4g02100;orf_classification=Uncharacterized;Alias=AFUA_4G02100,CADAFUAG00009859
+Chr4_A_fumigatus_Af293	AspGD	rRNA	711272	716235	.	-	.	ID=Afu4g02350-T;Parent=Afu4g02350;Name=Afu4g02350;orf_classification=Uncharacterized;Alias=AFUA_4G02350,CADAFUAG00009880
+Chr5_A_fumigatus_Af293	AspGD	rRNA	1700185	1700300	.	+	.	ID=Afu5g06912-T;Parent=Afu5g06912;Name=Afu5g06912;orf_classification=Uncharacterized;Alias=AFUA_5G06912,CADAFUAG00009887
+Chr5_A_fumigatus_Af293	AspGD	rRNA	1702545	1702660	.	+	.	ID=Afu5g06914-T;Parent=Afu5g06914;Name=Afu5g06914;orf_classification=Uncharacterized;Alias=AFUA_5G06914,CADAFUAG00009873
+Chr5_A_fumigatus_Af293	AspGD	rRNA	2098468	2098583	.	-	.	ID=Afu5g08265-T;Parent=Afu5g08265;Name=Afu5g08265;orf_classification=Uncharacterized;Alias=AFUA_5G08265,CADAFUAG00009871
+Chr5_A_fumigatus_Af293	AspGD	rRNA	3343444	3343559	.	-	.	ID=Afu5g12745-T;Parent=Afu5g12745;Name=Afu5g12745;orf_classification=Uncharacterized;Alias=AFUA_5G12745,CADAFUAG00009896
+Chr6_A_fumigatus_Af293	AspGD	rRNA	418039	418154	.	-	.	ID=Afu6g02315-T;Parent=Afu6g02315;Name=Afu6g02315;orf_classification=Uncharacterized;Alias=AFUA_6G02315,CADAFUAG00009888
+Chr6_A_fumigatus_Af293	AspGD	rRNA	1019050	1019165	.	-	.	ID=Afu6g04465-T;Parent=Afu6g04465;Name=Afu6g04465;orf_classification=Uncharacterized;Alias=AFUA_6G04465,CADAFUAG00009863
+Chr6_A_fumigatus_Af293	AspGD	rRNA	1205794	1205909	.	+	.	ID=Afu6g05075-T;Parent=Afu6g05075;Name=Afu6g05075;orf_classification=Uncharacterized;Alias=AFUA_6G05075,CADAFUAG00009897
+Chr6_A_fumigatus_Af293	AspGD	rRNA	2928493	2928608	.	+	.	ID=Afu6g11775-T;Parent=Afu6g11775;Name=Afu6g11775;orf_classification=Uncharacterized;Alias=AFUA_6G11775,CADAFUAG00009857
+Chr6_A_fumigatus_Af293	AspGD	rRNA	2935412	2935527	.	+	.	ID=Afu6g11785-T;Parent=Afu6g11785;Name=Afu6g11785;orf_classification=Uncharacterized;Alias=AFUA_6G11785,CADAFUAG00009864
+Chr6_A_fumigatus_Af293	AspGD	rRNA	3730880	3730995	.	-	.	ID=Afu6g14615-T;Parent=Afu6g14615;Name=Afu6g14615;orf_classification=Uncharacterized;Alias=AFUA_6G14615,CADAFUAG00009881
+Chr7_A_fumigatus_Af293	AspGD	rRNA	1662881	1662996	.	-	.	ID=Afu7g06825-T;Parent=Afu7g06825;Name=Afu7g06825;orf_classification=Uncharacterized;Alias=AFUA_7G06825,CADAFUAG00009893
+Chr8_A_fumigatus_Af293	AspGD	rRNA	407428	407543	.	+	.	ID=Afu8g01585-T;Parent=Afu8g01585;Name=Afu8g01585;orf_classification=Uncharacterized;Alias=AFUA_8G01585,CADAFUAG00009875
+Chr8_A_fumigatus_Af293	AspGD	rRNA	427204	427319	.	+	.	ID=Afu8g01635-T;Parent=Afu8g01635;Name=Afu8g01635;orf_classification=Uncharacterized;Alias=AFUA_8G01635,CADAFUAG00009851
+Chr8_A_fumigatus_Af293	AspGD	rRNA	605307	605422	.	-	.	ID=Afu8g02255-T;Parent=Afu8g02255;Name=Afu8g02255;orf_classification=Uncharacterized;Alias=AFUA_8G02255,CADAFUAG00009869
+Chr8_A_fumigatus_Af293	AspGD	rRNA	1445597	1445712	.	+	.	ID=Afu8g06075-T;Parent=Afu8g06075;Name=Afu8g06075;orf_classification=Uncharacterized;Alias=AFUA_8G06075,CADAFUAG00009885
+NZ_CP014696.2	cmsearch	rRNA	2532552	2532667	.	-	.	ID=rna43;Parent=gene2584;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	2532750	2535672	.	-	.	ID=rna44;Parent=gene2585;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	2536005	2537558	.	-	.	ID=rna46;Parent=gene2587;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	3315144	3315259	.	-	.	ID=rna63;Parent=gene3409;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	3315388	3315503	.	-	.	ID=rna65;Parent=gene3411;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	3315586	3318508	.	-	.	ID=rna66;Parent=gene3412;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	3318696	3320249	.	-	.	ID=rna67;Parent=gene3413;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	3817910	3819463	.	+	.	ID=rna71;Parent=gene3917;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	3819788	3822710	.	+	.	ID=rna73;Parent=gene3919;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	3822793	3822908	.	+	.	ID=rna74;Parent=gene3920;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	3918600	3920153	.	+	.	ID=rna75;Parent=gene4019;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	3920562	3923484	.	+	.	ID=rna78;Parent=gene4022;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	3923668	3923783	.	+	.	ID=rna79;Parent=gene4023;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4007805	4009358	.	+	.	ID=rna86;Parent=gene4114;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4009767	4012689	.	+	.	ID=rna89;Parent=gene4117;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	4012873	4012988	.	+	.	ID=rna90;Parent=gene4118;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4052914	4054467	.	+	.	ID=rna95;Parent=gene4162;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4054792	4057714	.	+	.	ID=rna97;Parent=gene4164;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	4057797	4057912	.	+	.	ID=rna98;Parent=gene4165;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4402127	4403680	.	+	.	ID=rna104;Parent=gene4515;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4404013	4406935	.	+	.	ID=rna106;Parent=gene4517;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	4407019	4407134	.	+	.	ID=rna107;Parent=gene4518;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4785042	4786595	.	+	.	ID=rna111;Parent=gene4890;gbkey=rRNA;product=16S ribosomal RNA
+NZ_CP014696.2	RefSeq	rRNA	4787011	4789933	.	+	.	ID=rna114;Parent=gene4893;gbkey=rRNA;product=23S ribosomal RNA
+NZ_CP014696.2	cmsearch	rRNA	4790117	4790232	.	+	.	ID=rna115;Parent=gene4894;Dbxref=RFAM:RF00001;gbkey=rRNA;gene=rrf;product=5S ribosomal RNA
