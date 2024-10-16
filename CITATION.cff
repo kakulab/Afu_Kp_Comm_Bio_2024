@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "Aspergillus fumigatus and Klebsiella pneumoniae interaction."
+authors:
+- family-names: Phan-Canh
+  given-names: Trinh
+orcid: https://orcid.org/0000-0002-6399-0959
+title: Aspergillus fumigatus and Klebsiella pneumoniae interaction.
+version: v1.0.0
+date-released: 2024-10-16
